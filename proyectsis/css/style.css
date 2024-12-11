@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    
+}
+
+/* header */
+
+header{
+    background-image: url("../img/background/background1.png");
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    color: white;
+    padding: 20px;    
+}
+
+header .nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+header .logo-bar{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header img{
+    width: 100px;
+    height: 100px;
+}
+
+header .nav-bar{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .nav-bar a{
+    margin: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black; 
+    padding: 10px;
+}
+
+header .nav-bar a:hover{
+    background-color: rgb(228, 10, 10);
+    color: white;
+}
+
+header .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+}
+
+.button img {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* CAROUSEL */
+
+/* SIDEBAR*/
+
+/* Barra lateral oculta inicialmente */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Oculta inicialmente */
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+}
+
+/* Cuando la barra está activa */
+.sidebar.active {
+    right: 0;
+}
+
+/* IMAGES */
+section .images{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    overflow: hidden; /* Oculta cualquier desbordamiento */ 
+    position: relative; /* Para posicionar elementos hijos relativamente */
+    
+}
+section .images img { 
+    transition: transform 0.3s ease; /* Animación suave */ 
+    transform-origin: center center; /* Escala desde el centro */ 
+    width: 70vh; /* Asegura que la imagen ocupe todo el contenedor */ 
+    height: 45vh; /* Mantiene la proporción de la imagen */
+} 
+section .images img:hover { 
+    transform: scale(1.1); /* Incrementa el tamaño al pasar el cursor */ 
+    position: relative; /* Mantiene la imagen en su lugar */ 
+    z-index: 1; /* Asegura que la imagen agrandada esté encima */
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333
+}
+
+footer #anex, #conex, #others{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+footer #anex .text-box{
+    margin: 10px;
+    width: 30vh;
+    height: 20vh;
+    display: grid;
+    color: white;
+}
+
+footer #anex .text-box h1{
+    font-size: 30px;
+}
+
+footer #anex .text-box a{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+
+footer #conex .con-logo{
+    display: flex;
+    justify-content: center;
+    margin: 5vh;
+}
+
+footer #conex .con-logo img{
+    width: 20vh;
+    height: auto;
+    margin: 1vh;
+}
+
+footer #conex .content{
+    display: flex;
+    margin: 5vh;
+}
+
+footer #conex .content img{
+    width: 5vh;
+    height: auto;
+    margin: 1vh;
+}
+
+footer #conex p{
+    color: white;
+}
+
+
+footer #others .text-det{
+    display: grid;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 10vh;
+    color: white;
+}
+
+footer #others .text-det .locations{
+    width: 50vh;
+}
+
+footer #others .text-det a,p{
+    color: white; 
+}
+
+footer #others .text-det p{
+    text-align: center;
+}
+
+/*3 CARTAS*/
+
+.grid-productos{
+    margin: -20% 20% 5% 20%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.grid-productos .carta-producto {
+    box-shadow:#26518d;
+    margin: 5%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.Venta {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 160px;
+    background-color: #c41c1c;
+    text-decoration: none;
+    color: white;
+    padding: 6px; 
+    font-size: 12px;
+    border-radius: 10px;
+}
+.Venta:hover{
+    transform: scale(1.1);
+}
+
+.grid-productos .carta-producto .text-producto {
+    margin: 10px;
+}
+.grid-productos .carta-producto .text-producto h4{
+    margin-bottom: 5px;
+    color:   #26518d ;
+    font-size: 15px;
+}
+.grid-productos .carta-producto .text-producto h5{
+    font-size: 15px;
+}
+.grid-productos .carta-producto .text-producto p{
+    color:  #3371c1 ;
+    font-size: 10px;
+}
+
+.grid-productos .carta-producto .img-producto img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+.grid-productos .carta-producto .preferencias-producto svg {
+    margin-left: 7%;
+    color: #7f858a;
+}
+
+.grid-productos .carta-producto .preferencias-producto .segunda-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 5% 5% 5%;
+    
+}
+.grid-productos .carta-producto .preferencias-producto .segunda-producto svg{
+    background-color: #7f858a;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    margin: 0;
+    height: 10%;
+    width: 10%;
+}
+
+.grid-productos .carta-producto .preferencias-producto .segunda-producto img{
+    height: 13%;
+    width: 13%;
+    border-radius: 50%;
+}
+
+.VER-MAS-PRODUCTOS{
+    margin: -5% 0% 1% 0% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.VER-MAS-PRODUCTOS a{
+    padding: 10px 20px 10px 20px;
+    background-color: #b11616;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.VER-MAS-PRODUCTOS a:hover{
+    background-color: #26518d;
+    color: yellow;
+}
+
+.sistema{
+    background-color: #26518d;
+    border-radius: 20px;
+}

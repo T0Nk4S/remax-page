@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo-bar">
+                <img src="img/logos/remax-logo.png" alt="">
+            </div>
+            <div class="nav-bar">
+                <nav>
+                    <a href="../proyectsis/index.html">INICIO</a>
+                    <a href="../proyectsis/form.html">COMPRAR</a>
+                    <a href="../proyectsis/form.html">VENDER</a>
+                    <a href="../proyectsis/form.html">ALQUILAR</a>
+                </nav>
+            </div>
+            <div class="button">
+                <a href="javascript:void(0);" id="menu-button">
+                    <img src="img/logos/menu.svg" alt="Menú">
+                </a>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container"> 
+            <h1>Compra / Venta / Alquiler</h1> 
+            <p>Acceder a Google para guardar el progreso. <a href="#">Más información</a></p> 
+            <form> 
+                <div class="form-group"> 
+                    <label for="correo">Correo *</label> 
+                    <input type="email" id="correo" name="correo" required> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="nombre">Nombre *</label> 
+                    <input type="text" id="nombre" name="nombre" required> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="fechaNacimiento">Fecha de nacimiento *</label> 
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="telefono">Teléfono de contacto *</label> 
+                    <input type="tel" id="telefono" name="telefono" required> </div> 
+                    <div class="form-group"> 
+                        <label for="departamentoHabita">Departamento donde habita *</label> 
+                        <select id="departamentoHabita" name="departamentoHabita" required> 
+                            <option value="">Seleccione...</option> 
+                            <option value="Beni">Beni</option> 
+                            <option value="Chuquisaca">Chuquisaca</option> 
+                            <option value="Cochabamba">Cochabamba</option> 
+                            <option value="La Paz">La Paz</option> 
+                            <option value="Oruro">Oruro</option> 
+                            <option value="Pando">Pando</option> 
+                            <option value="Potosí">Potosí</option> 
+                            <option value="Santa Cruz">Santa Cruz</option> 
+                            <option value="Tarija">Tarija</option> 
+                        </select> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label>Le interesa *</label> 
+                        <input type="checkbox" id="comprar" name="interes" value="comprar"> 
+                        <label for="comprar">Comprar</label> 
+                        <input type="checkbox" id="vender" name="interes" value="vender"> 
+                        <label for="vender">Vender</label> 
+                        <input type="checkbox" id="alquilar" name="interes" value="alquilar"> 
+                        <label for="alquilar">Alquilar</label> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="departamentoInteresa">Departamento donde le interesa *</label> 
+                        <select id="departamentoInteresa" name="departamentoInteresa" required> 
+                            <option value="">Seleccione...</option> 
+                            <option value="Beni">Beni</option> 
+                            <option value="Chuquisaca">Chuquisaca</option> 
+                            <option value="Cochabamba">Cochabamba</option> 
+                            <option value="La Paz">La Paz</option> 
+                            <option value="Oruro">Oruro</option> 
+                            <option value="Pando">Pando</option> 
+                            <option value="Potosí">Potosí</option> 
+                            <option value="Santa Cruz">Santa Cruz</option> 
+                            <option value="Tarija">Tarija</option> 
+                        </select> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="zona">Zona *</label> 
+                        <input type="text" id="zona" name="zona" required> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label>Tipo de Propiedad *</label> 
+                        <input type="radio" id="casa" name="tipoPropiedad" value="Casa" required> 
+                        <label for="casa">Casa</label> 
+                        <input type="radio" id="departamento" name="tipoPropiedad" value="Departamento" required> 
+                        <label for="departamento">Departamento</label> 
+                        <input type="radio" id="otros" name="tipoPropiedad" value="Otros" required> 
+                        <label for="otros">Otros:</label> 
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="descripcion">Descripción adicional *</label> 
+                        <textarea id="descripcion" name="descripcion" required></textarea> 
+                    </div> 
+                <button type="submit">Enviar</button> 
+            </form> 
+        </div>
+    </section>
+
+    <footer >
+        <section id="anex">
+            <div class="text-box">
+                <h1>Home</h1>
+                <a href="">Acerca de RE/MAX</a>
+                <a href="">Historia de la compañía</a>
+                <a href="">RE/MAX Worldwide</a>
+            </div>
+            <div class="text-box">
+                <h1>Propiedades</h1>
+                <a href="">Comprar</a>
+                <a href="">Anticrético</a>
+                <a href="">Vender</a>
+                <a href="">Alquilar</a>
+            </div>
+            <div class="text-box">
+                <h1>Agentes & Oficinas</h1>
+                <a href="">Se un Agente</a>
+                <a href="">Franquicias</a>
+                <a href="">Porque RE/MAX?</a>
+            </div>
+            <div class="text-box">
+                <h1>Nuestros Servicios</h1>
+                <a href="">Reclamos</a>
+                <a href="">Proyectos</a>
+            </div>
+        </section>
+        <section id="conex">
+            <div class="con-logo">
+                <img src="img/logos/remax-text.png" alt="">
+            </div>
+            <p>Seguir a RE/MAX Bolivia</p>
+            <div class="content">
+                <img src="img/logos/facebook-logo.svg" alt="" id="img-con-1">
+                <img src="img/logos/youtube-logo.svg" alt="" id="img-con-2">
+                <img src="img/logos/linkedin-logo.svg" alt="" id="img-con-3">
+            </div>
+
+        </section>
+        <section id="others">
+            <div class="text-det">
+                <a href="">RE/MAX Internacional</a>
+                <a href="">RE/MAX Bolivia</a>
+                <a href="">Privacidad</a>
+                <a href="">Legal</a>
+            </div>
+            <div class="text-det">
+                <p>2024 © RE/MAX</p>
+                <div class="locations">
+                    <a href="#">Albania</a> <a href="#">Belgium</a> <a href="#">Bosna i Hercegovina</a> 
+                    <a href="#">Bulgaria</a><a href="#">Croatia</a> <a href="#">Cyprus</a> 
+                    <a href="#">Denmark</a>  <a href="#">Estonia</a>  <a href="#">Finland</a>  <a href="#">France</a>  <a href="#">Germany</a> 
+                    <a href="#">Greece</a>  <a href="#">Hungary</a>  <a href="#">Iceland</a>  <a href="#">Ireland</a>  <a href="#">Israel</a> 
+                    <a href="#">Italy</a>  <a href="#">Kosovo</a>  <a href="#">Latvia</a>  <a href="#">Liechtenstein</a>  <a href="#">Lithuania</a> 
+                    <a href="#">Luxembourg</a>  <a href="#">Malta</a>  <a href="#">Montenegro</a>  <a href="#">Netherlands</a>  <a href="#">Norway</a> 
+                </div>
+            </div>
+            <div class="text-det">
+                <img src="img/logos/gryphtech-logo.png" alt="" id="img-oth">
+            </div>
+        </section>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

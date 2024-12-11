@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SistemaBeienesRaices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="source/css/styles.css">
+</head>
+<style>
+    .img-container {
+        position: relative;
+        width: 1200px;
+        height: 700px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    .img-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.25s ease;
+    }
+
+    .controls {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        gap: 5px;
+    }
+
+    .controls button {
+        padding: 5px 10px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        background: #333;
+        color: #fff;
+        border-radius: 3px;
+        transition: background 0.3s ease;
+    }
+
+    .controls button:hover {
+        background: #555;
+    }
+</style>
+<body>
+    <div class="content-wrapper">
+        <div class="wrapper">
+            <div class="content">
+                <div id="header-placeholder" style="border: 1px dashed #ccc; text-align: center; padding: 10px;">
+                    <p>Cargando header...</p>
+                </div>
+                <main class="container py-5">
+                    <div class="mt-5">
+                        <h2 class="text-uppercase border-bottom pb-2">
+                            Diagrama de casos de uso
+                        </h2>
+                        <h4>Diagrama de casos de uso de Negocio</h4>
+                        <p class="fs-5 text-justify">
+                            Un diagrama de caso de uso de negocio es una representación visual de las interacciones y relaciones entre los diferentes actores (usuarios o sistemas externos) y los procesos de negocio dentro de una organización. Este tipo de diagrama se utiliza para modelar y entender cómo los procesos de negocio satisfacen las necesidades de los actores involucrados.
+                        </p>
+                        
+                        <div class="img-container">
+                            <img id="zoom-img" src="source/img/CasosdeUsoNegocio.jpeg" alt="Imagen con zoom">
+                            <div class="controls">
+                                <button onclick="zoomIn('zoom-img')">+</button> 
+                                <button onclick="zoomOut('zoom-img')">-</button> 
+                                <button onclick="moveImage('zoom-img', 75, 0)">←</button> 
+                                <button onclick="moveImage('zoom-img', -75, 0)">→</button> 
+                                <button onclick="moveImage('zoom-img', 0, 75)">↑</button> 
+                                <button onclick="moveImage('zoom-img', 0, -75)">↓</button>
+                            </div>
+                        </div>
+                        
+                        
+
+                    </div>
+                    <div class="mt-5">
+                        <h4>Diagrama de casos de uso de Sistema</h4>
+                        <p class="fs-5 text-justify">
+                            Un diagrama de caso de uso de negocio es una representación visual de las interacciones y relaciones entre los diferentes actores (usuarios o sistemas externos) y los procesos de negocio dentro de una organización. Este tipo de diagrama se utiliza para modelar y entender cómo los procesos de negocio satisfacen las necesidades de los actores involucrados.
+                        </p>
+                        
+                    </head>
+                        
+                        <div class="img-container">
+                            <img id="zoom-img1" src="source/img/CasosdeUsoSistema.jpeg" alt="Imagen con zoom">
+                            <div class="controls">
+                                <button onclick="zoomIn('zoom-img1')">+</button> 
+                                <button onclick="zoomOut('zoom-img1')">-</button> 
+                                <button onclick="moveImage('zoom-img1', 75, 0)">←</button> 
+                                <button onclick="moveImage('zoom-img1', -75, 0)">→</button> 
+                                <button onclick="moveImage('zoom-img1', 0, 75)">↑</button> 
+                                <button onclick="moveImage('zoom-img1', 0, -75)">↓</button>
+                    
+                            </div>
+                        </div>
+                    
+                        
+
+
+
+                    </div>
+                    <div class="container mt-5">
+                        <h1 class="text-center mb-4">Casos de Uso</h1>
+                        <div class="accordion" id="accordionCasosDeUso">
+                            <!-- Caso de Uso 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        1. Registro de Usuario
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Usuario</p>
+                                        <p><strong>Descripción:</strong> Permite que un usuario se registre en el sistema proporcionando datos personales como email, contraseña, nombre, etc.</p>
+                                        <p><strong>Relación:</strong> Clase Usuario (método <code>registrar()</code>).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        2. Inicio de Sesión
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Usuario</p>
+                                        <p><strong>Descripción:</strong> Permite que un usuario inicie sesión en el sistema con su email y contraseña.</p>
+                                        <p><strong>Relación:</strong> Clase Usuario (método <code>iniciarSesion()</code>).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        3. Envío de Solicitud para Ser Agente
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Usuario</p>
+                                        <p><strong>Descripción:</strong> Un usuario envía una solicitud para ser considerado como agente inmobiliario.</p>
+                                        <p><strong>Relación:</strong> Clases Usuario y SolicitudAgente (método <code>enviarSolicitudAgente()</code>).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        4. Gestión de Propiedades
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Agente Inmobiliario</p>
+                                        <p><strong>Descripción:</strong> Permite al agente inmobiliario gestionar propiedades (crear, modificar, o eliminar propiedades en el sistema).</p>
+                                        <p><strong>Relación:</strong> Clases AgenteInmobiliario y Propiedad (método <code>gestionarPropiedad()</code>).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        5. Asignar Propiedad a Cliente
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Agente Inmobiliario</p>
+                                        <p><strong>Descripción:</strong> Un agente puede asignar una propiedad a un cliente interesado.</p>
+                                        <p><strong>Relación:</strong> Clase AgenteInmobiliario (método <code>asignarPropiedad()</code>).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 6-10 -->
+                            <!-- Añade el resto de casos de uso siguiendo el mismo patrón -->
+                        </div>
+                    </div>
+                    <div class="container mt-5">
+                        <h1 class="text-center mb-4">Tabla de Casos de Uso</h1>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre del Caso de Uso</th>
+                                        <th>Actor(es)</th>
+                                        <th>Descripción</th>
+                                        <th>Relación/Clases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CU01</td>
+                                        <td>Registro de Usuario</td>
+                                        <td>Usuario</td>
+                                        <td>Permite a un usuario registrarse en el sistema ingresando datos como email, contraseña, nombre, etc.</td>
+                                        <td>Usuario (método registrar())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU02</td>
+                                        <td>Inicio de Sesión</td>
+                                        <td>Usuario</td>
+                                        <td>Permite que un usuario inicie sesión con su email y contraseña.</td>
+                                        <td>Usuario (método iniciarSesion())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU03</td>
+                                        <td>Envío de Solicitud para Ser Agente</td>
+                                        <td>Usuario</td>
+                                        <td>Un usuario puede enviar una solicitud para convertirse en agente inmobiliario.</td>
+                                        <td>Usuario, SolicitudAgente (método enviarSolicitudAgente())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU04</td>
+                                        <td>Gestión de Propiedades</td>
+                                        <td>Agente Inmobiliario</td>
+                                        <td>Un agente puede crear, modificar o eliminar propiedades en el sistema.</td>
+                                        <td>AgenteInmobiliario, Propiedad (método gestionarPropiedad())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU05</td>
+                                        <td>Asignar Propiedad a Cliente</td>
+                                        <td>Agente Inmobiliario</td>
+                                        <td>El agente puede asignar una propiedad a un cliente interesado.</td>
+                                        <td>AgenteInmobiliario (método asignarPropiedad())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU06</td>
+                                        <td>Consulta de Propiedades</td>
+                                        <td>Cliente</td>
+                                        <td>Un cliente consulta las propiedades disponibles según sus preferencias.</td>
+                                        <td>Cliente, Propiedad (método consultarPropiedad())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU07</td>
+                                        <td>Registro de Inversión</td>
+                                        <td>Cliente</td>
+                                        <td>Permite al cliente realizar una inversión en un proyecto inmobiliario.</td>
+                                        <td>Cliente, Inversion, Proyecto (método realizarInversion())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU08</td>
+                                        <td>Gestión de Contratos</td>
+                                        <td>Cliente, Agente Inmobiliario</td>
+                                        <td>Permite firmar, cancelar o renovar contratos asociados a propiedades.</td>
+                                        <td>Contrato, Cliente, AgenteInmobiliario (métodos firmaContrato(), cancelarContrato(), renovarContrato())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU09</td>
+                                        <td>Envío de Formulario de Consulta</td>
+                                        <td>Cliente</td>
+                                        <td>Permite al cliente enviar un formulario con preferencias de búsqueda, como ubicación y tipo de propiedad.</td>
+                                        <td>FormularioConsulta, Cliente (método enviarConsulta())</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CU10</td>
+                                        <td>Cierre de Proyecto</td>
+                                        <td>Administrador, Agente Inmobiliario</td>
+                                        <td>Permite cerrar un proyecto una vez cumplido el objetivo de inversión.</td>
+                                        <td>Proyecto (método cerrarProyecto())</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5">
+                        <h1 class="text-center mb-4">CASO DE USO TIPO TEXTO</h1>
+                        <div class="accordion" id="accordionCasosDeUso">
+                            <!-- Caso de Uso 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU01">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU01" aria-expanded="true" aria-controls="collapseCU01">
+                                        CU01: Registro de Usuario
+                                    </button>
+                                </h2>
+                                <div id="collapseCU01" class="accordion-collapse collapse show" aria-labelledby="headingCU01" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Usuario</p>
+                                        <p><strong>Descripción:</strong> Permite que un usuario se registre en el sistema proporcionando sus datos personales como email, contraseña, nombre, entre otros.</p>
+                                        <p><strong>Precondiciones:</strong> El usuario no debe estar registrado previamente.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El usuario accede a la opción de registro.</li>
+                                            <li>Ingresa sus datos personales (email, contraseña, nombre, etc.).</li>
+                                            <li>El sistema valida que el email no esté registrado previamente.</li>
+                                            <li>Se guarda la información en el sistema.</li>
+                                            <li>El sistema confirma que el registro fue exitoso.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El usuario queda registrado en el sistema y puede iniciar sesión.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU02">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU02" aria-expanded="false" aria-controls="collapseCU02">
+                                        CU02: Inicio de Sesión
+                                    </button>
+                                </h2>
+                                <div id="collapseCU02" class="accordion-collapse collapse" aria-labelledby="headingCU02" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Usuario</p>
+                                        <p><strong>Descripción:</strong> Permite que un usuario inicie sesión en el sistema mediante su email y contraseña.</p>
+                                        <p><strong>Precondiciones:</strong> El usuario debe estar registrado en el sistema.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El usuario accede a la opción de inicio de sesión.</li>
+                                            <li>Ingresa su email y contraseña.</li>
+                                            <li>El sistema valida las credenciales ingresadas.</li>
+                                            <li>Si las credenciales son correctas, el sistema permite el acceso al usuario.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El usuario accede a su cuenta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Caso de Uso 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU03">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU03" aria-expanded="false" aria-controls="collapseCU03">
+                                        CU03: Envío de Solicitud para Ser Agente
+                                    </button>
+                                </h2>
+                                <div id="collapseCU03" class="accordion-collapse collapse" aria-labelledby="headingCU03" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Usuario</p>
+                                        <p><strong>Descripción:</strong> Permite que un usuario envíe una solicitud para ser considerado como agente inmobiliario.</p>
+                                        <p><strong>Precondiciones:</strong> El usuario debe estar registrado y no tener el rol de agente inmobiliario.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El usuario accede a la opción "Solicitar ser agente".</li>
+                                            <li>Rellena un formulario con datos como su currículum y área de especialidad.</li>
+                                            <li>El sistema almacena la solicitud y cambia su estado a "pendiente".</li>
+                                            <li>Un administrador revisa y aprueba/rechaza la solicitud.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> La solicitud queda registrada para ser evaluada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU04">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU04" aria-expanded="false" aria-controls="collapseCU04">
+                                        CU04: Gestión de Propiedades
+                                    </button>
+                                </h2>
+                                <div id="collapseCU04" class="accordion-collapse collapse" aria-labelledby="headingCU04" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Agente Inmobiliario</p>
+                                        <p><strong>Descripción:</strong> Permite a un agente inmobiliario crear, modificar o eliminar propiedades.</p>
+                                        <p><strong>Precondiciones:</strong> El agente debe estar registrado y autenticado en el sistema.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El agente accede a la sección de gestión de propiedades.</li>
+                                            <li>Selecciona una acción: crear, modificar o eliminar una propiedad.</li>
+                                            <li>En caso de creación, ingresa los detalles de la propiedad (dirección, precio, tipo, etc.).</li>
+                                            <li>El sistema guarda los cambios y confirma la acción.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> Las propiedades son actualizadas en el sistema.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CU05 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU05">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU05" aria-expanded="false" aria-controls="collapseCU05">
+                                        CU05: Asignar Propiedad a Cliente
+                                    </button>
+                                </h2>
+                                <div id="collapseCU05" class="accordion-collapse collapse" aria-labelledby="headingCU05" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Agente Inmobiliario</p>
+                                        <p><strong>Descripción:</strong> Un agente puede asignar una propiedad a un cliente interesado.</p>
+                                        <p><strong>Precondiciones:</strong> El cliente y la propiedad deben estar registrados en el sistema.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El agente accede a la lista de clientes y propiedades.</li>
+                                            <li>Selecciona un cliente y una propiedad para asignar.</li>
+                                            <li>El sistema registra la asignación y notifica al cliente.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> La propiedad queda vinculada al cliente.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CU06 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU06">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU06" aria-expanded="false" aria-controls="collapseCU06">
+                                        CU06: Consulta de Propiedades
+                                    </button>
+                                </h2>
+                                <div id="collapseCU06" class="accordion-collapse collapse" aria-labelledby="headingCU06" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Cliente</p>
+                                        <p><strong>Descripción:</strong> Un cliente consulta las propiedades disponibles según sus preferencias.</p>
+                                        <p><strong>Precondiciones:</strong> El cliente debe estar registrado y autenticado.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El cliente accede a la opción de búsqueda de propiedades.</li>
+                                            <li>Ingresa sus criterios de búsqueda (ubicación, tipo, precio, etc.).</li>
+                                            <li>El sistema filtra las propiedades disponibles según los criterios ingresados.</li>
+                                            <li>Se muestra una lista de propiedades que cumplen con las preferencias.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El cliente visualiza las propiedades disponibles.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CU07 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU07">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU07" aria-expanded="false" aria-controls="collapseCU07">
+                                        CU07: Registro de Inversión
+                                    </button>
+                                </h2>
+                                <div id="collapseCU07" class="accordion-collapse collapse" aria-labelledby="headingCU07" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Cliente</p>
+                                        <p><strong>Descripción:</strong> Permite al cliente realizar una inversión en un proyecto inmobiliario.</p>
+                                        <p><strong>Precondiciones:</strong> El cliente debe estar registrado y haber seleccionado un proyecto.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El cliente selecciona un proyecto en el que desea invertir.</li>
+                                            <li>Ingresa el monto de inversión.</li>
+                                            <li>El sistema valida que el monto sea menor o igual al requerido por el proyecto.</li>
+                                            <li>Se registra la inversión en el sistema.</li>
+                                            <li>El sistema confirma la transacción.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El monto invertido queda registrado en el proyecto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CU08 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU08">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU08" aria-expanded="false" aria-controls="collapseCU08">
+                                        CU08: Gestión de Contratos
+                                    </button>
+                                </h2>
+                                <div id="collapseCU08" class="accordion-collapse collapse" aria-labelledby="headingCU08" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Cliente, Agente Inmobiliario</p>
+                                        <p><strong>Descripción:</strong> Incluye acciones como firmar, cancelar o renovar contratos asociados a propiedades.</p>
+                                        <p><strong>Precondiciones:</strong> Debe existir un contrato previamente registrado.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El cliente o agente accede a la sección de contratos.</li>
+                                            <li>Selecciona una acción (firmar, cancelar o renovar).</li>
+                                            <li>El sistema actualiza el estado del contrato según la acción realizada.</li>
+                                            <li>Se confirma la acción.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El estado del contrato es actualizado.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CU09 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU09">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU09" aria-expanded="false" aria-controls="collapseCU09">
+                                        CU09: Envío de Formulario de Consulta
+                                    </button>
+                                </h2>
+                                <div id="collapseCU09" class="accordion-collapse collapse" aria-labelledby="headingCU09" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Cliente</p>
+                                        <p><strong>Descripción:</strong> Permite al cliente enviar un formulario con preferencias de búsqueda.</p>
+                                        <p><strong>Precondiciones:</strong> El cliente debe estar registrado y autenticado.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El cliente accede al formulario de consulta.</li>
+                                            <li>Completa los campos requeridos (ubicación, tipo de propiedad, etc.).</li>
+                                            <li>Envía el formulario.</li>
+                                            <li>El sistema almacena los datos y los envía al agente correspondiente.</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El formulario queda registrado en el sistema.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CU10 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCU10">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCU10" aria-expanded="false" aria-controls="collapseCU10">
+                                        CU10: Cierre de Proyecto
+                                    </button>
+                                </h2>
+                                <div id="collapseCU10" class="accordion-collapse collapse" aria-labelledby="headingCU10" data-bs-parent="#accordionCasosDeUso">
+                                    <div class="accordion-body">
+                                        <p><strong>Actor:</strong> Administrador, Agente Inmobiliario</p>
+                                        <p><strong>Descripción:</strong> Permite cerrar un proyecto una vez cumplido su objetivo de inversión.</p>
+                                        <p><strong>Precondiciones:</strong> El proyecto debe estar activo y con su monto de inversión completo.</p>
+                                        <p><strong>Flujo Principal:</strong></p>
+                                        <ol>
+                                            <li>El administrador o agente accede a la lista de proyectos activos.</li>
+                                            <li>Selecciona el proyecto que desea cerrar.</li>
+                                            <li>El sistema verifica que el monto de inversión esté completo.</li>
+                                            <li>Se actualiza el estado del proyecto a "cerrado".</li>
+                                        </ol>
+                                        <p><strong>Postcondiciones:</strong> El proyecto queda cerrado en el sistema.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+    
+                        </div>
+                    </div>
+                </main>
+
+    </div></div></div>
+    <div id="footer-placeholder" style="border: 1px dashed #ccc; text-align: center; padding: 10px;">
+        <p>Cargando footer...</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="source/js/main.js"></script>
+    <!--<script>
+        const img = document.getElementById('zoom-img');
+        let scale = 1;
+        let posX = 0;
+        let posY = 0;
+
+
+        function zoomIn() {
+            scale = Math.min(scale + 0.70, 3);
+            updateTransform();
+        }
+
+        function zoomOut() {
+            scale = Math.max(scale - 0.7, 1);
+            updateTransform();
+        }
+
+        function moveImage(deltaX, deltaY) {
+            posX += deltaX;
+            posY += deltaY;
+            updateTransform();
+        }
+
+        function updateTransform() {
+            img.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`;
+        }
+    </script>-->
+    <script> function zoomIn(imgId) { const img = document.getElementById(imgId); const scale = img.dataset.scale ? parseFloat(img.dataset.scale) : 1; const newScale = Math.min(scale + 0.7, 3); img.dataset.scale = newScale; updateTransform(imgId); } function zoomOut(imgId) { const img = document.getElementById(imgId); const scale = img.dataset.scale ? parseFloat(img.dataset.scale) : 1; const newScale = Math.max(scale - 0.7, 1); img.dataset.scale = newScale; updateTransform(imgId); } function moveImage(imgId, deltaX, deltaY) { const img = document.getElementById(imgId); const posX = img.dataset.posX ? parseFloat(img.dataset.posX) : 0; const posY = img.dataset.posY ? parseFloat(img.dataset.posY) : 0; img.dataset.posX = posX + deltaX; img.dataset.posY = posY + deltaY; updateTransform(imgId); } function updateTransform(imgId) { const img = document.getElementById(imgId); const scale = img.dataset.scale ? parseFloat(img.dataset.scale) : 1; const posX = img.dataset.posX ? parseFloat(img.dataset.posX) : 0; const posY = img.dataset.posY ? parseFloat(img.dataset.posY) : 0; img.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`; } </script>
+
+</body>
+</html>

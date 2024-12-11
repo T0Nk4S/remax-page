@@ -1,0 +1,264 @@
+
+
+/* Ajustar el tamaño del logo y centrarlo verticalmente */
+.navbar-brand {
+    font-size: 1.5rem; /* Tamaño del logo */
+    font-weight: bold;
+    padding: 8px 0;
+    width: 100px;
+}
+
+.navbar-brand img{
+    width: 25vh;
+    height: 10vh;
+}
+
+/* Centrar el navbar verticalmente */
+.navbar {
+    height: 70px; /* Altura del navbar */
+    display: flex;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Opciones del menú */
+.navbar-nav .nav-link {
+    font-size: 1rem; /* Tamaño de texto */
+    padding: 5px 10px;
+}
+
+/* Estilo del dropdown */
+.dropdown-menu {
+    background-color: #cccccc;
+}
+
+/* Mostrar dropdown al hacer hover en la pestaña */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Muestra el menú */
+    margin-top: 0;  /* Elimina el desplazamiento */
+}
+
+/* Ajustar la animación del dropdown */
+.nav-item.dropdown .dropdown-menu {
+    transition: opacity 0.2s ease-in-out; /* Añade un efecto suave */
+    opacity: 0; /* Por defecto está oculto */
+    visibility: hidden; /* Evita interacción cuando está oculto */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1; /* Muestra con transparencia */
+    visibility: visible;
+}
+@media (max-width: 991.98px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: none;
+    }
+}
+html, body {
+    height: 100%; /* El documento ocupa toda la altura de la pantalla */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Establecemos una columna en la página */
+}
+
+/* El contenedor principal ocupa el espacio restante */
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    flex-grow: 1; /* Permite que el contenido crezca para llenar la pantalla */
+}
+
+/* El contenido principal se alinea arriba por defecto */
+main {
+    flex: 1 0 auto; /* Permite que el contenido crezca, pero no lo hace expansible */
+    padding: 20px;
+    background-color: #f7f7f7; /* Puedes ajustar el color del fondo */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #aaaaaa;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+/* Estilo para el encabezado "Tabla de contenido" en el menú desplegable */
+.dropdown-item-heading {
+    font-weight: bold;
+    color: #007bff; /* Puedes cambiar este color según tu preferencia */
+    padding: 8px 16px; /* Añadimos algo de espaciado alrededor del texto */
+    background-color: #f8f9fa; /* Fondeamos con el color de fondo */
+    text-align: center;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
+.dropdown-item-heading + .dropdown-item {
+    border-top: 1px solid #ddd;
+}
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 80%; 
+    max-width: 900px; 
+    height: 500px; 
+    background-color: #fff; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+}
+
+/* Estilo para el iframe (video) */
+.video iframe {
+    width: 100%; /* El video ocupa todo el ancho del contenedor */
+    height: 100%; /* El video ocupa toda la altura del contenedor */
+    border-radius: 10px; /* Bordes redondeados en el iframe */
+}
+/* Efecto para las tarjetas seleccionables */
+.selectable-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.selectable-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilo para indicar tarjeta seleccionada */
+.selectable-card:focus-within,
+.selectable-card:active {
+    border: 2px solid #ffc107; /* Cambia el borde al color amarillo */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.6); /* Brillo amarillo */
+}
+body {
+    background-color: white; /* Fondo principal blanco */
+    margin: 0; /* Quitar márgenes del body */
+    padding: 0; /* Quitar relleno del body */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centrar el contenido */
+    background: linear-gradient(to right, #e60e16 10%, white 10%, white 90%, #003da5 90%); /* Franjas rojas a los lados */
+    min-height: 100vh; /* Altura mínima para que cubra toda la pantalla */
+}
+.content {
+    max-width: 1200px; /* Ajustar el ancho del contenido */
+    width: 100%; /* Hacer que ocupe todo el espacio disponible */
+    padding: 20px; /* Espaciado interno */
+}
+h2, h4,h1{
+    color: #003da5;
+}
+strong{
+    color: #e60e16;
+}
+section{ 
+    align-items: center;
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    margin-left: 6%;
+}
+section img{
+    border: #003da5 2px solid;
+    padding: 10px;
+    align-items: center;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+#integrantes {
+    background-color: #f8f9fa; /* Fondo claro */
+}
+
+#integrantes h2 {
+    color: #333; /* Color del título */
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Sombra al pasar el mouse */
+}
+
+.card-title {
+    color: #e60e16; /* Azul de Bootstrap */
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1rem 0.5rem; /* Reducir espacio vertical */
+}
+
+
+#footerss{
+    color: #003da5;
+    font-weight: bold;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+    width: 100;
+    background-color: #e60e16;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cont a{
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #003da5;
+    width: 25vh;
+    height: 5vh;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#interactive-diagram {
+    align-items: center;
+    max-width: 78%;
+    height: 450px;
+    margin: 20px auto;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.botonPagina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonPagina a{
+    text-decoration: none;
+    color: white;
+    background-color: #003da5;
+    padding: 15px 30px 15px 30px;
+    border-radius: 15px;
+
+}

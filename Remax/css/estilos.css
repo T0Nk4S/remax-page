@@ -1,0 +1,469 @@
+/* styles.css */
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    background-color: #eeeeee;
+}
+
+/*HEADER*/
+header{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+header .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    background-color: #333333;
+    min-height: 10vh; margin: 0;
+}
+
+header .logo-bar{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+}
+
+header .logo-bar img{
+    width: 100px;
+    height: 100px;
+}
+
+header .nav-bar{
+    width: 50%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .nav-bar a{
+    margin: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+}
+header .nav-bar a:hover{
+    background-color: rgb(216, 19, 19);
+}
+
+.main-container {
+    display: flex;
+    align-items: center; 
+    min-height: 150vh;
+    margin: 0; 
+    flex-direction: column;
+    justify-content: flex-start; 
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.bottom-container {
+    display: flex;
+    justify-content:space-between; 
+    margin-top: 20px;
+}
+.bottom-container h1{
+    font-size: 25px;
+    font-family:sans-serif;
+    color: #004891;
+    font-weight: 100;
+}
+h1, h2, h3, p {
+    margin: 5px 0; 
+    line-height: 1.1;
+}
+.bottom-container h2{
+    font-size: 30px;
+    font-family: "Segoe IU", sans-serif;
+    font-weight: lighter;
+    color:crimson;
+}
+.bottom-container h3{
+    font-size: 20px;
+    font-family:sans-serif;
+    color: #004891;
+    font-weight: lighter;
+    padding-bottom: 15px;
+}
+.bottom-container p{
+    font-size: 15px;
+    color: #8e8e8e;
+    font-family: "Segoe IU", sans-serif;
+}
+.bottom-container .box1 {
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 4px; 
+    min-height: 600px;
+    width: 580px;
+    margin-right: 2%;  
+    padding: 10px 20px 15px 20px; 
+}
+/*---contenedor 2---*/
+.box2 { 
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 4px; 
+    min-height: 600px;
+    width: 320px;
+    padding: 10px 20px 10px 20px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+}
+.box2 .con-img{ 
+    height: 240px;
+    width: 190px;
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+
+.box2 .con-img img{ 
+    width: 100%;
+    max-width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.box2 p{ 
+    font-size: 15px;
+    color: #6b6a6a;
+    font-family: "Segoe IU", sans-serif;
+    font-weight: lighter;
+}
+.box2 .nombre{ 
+    font-size: 15px;
+    color: #2474c4;
+    font-family: "Segoe IU", sans-serif;
+    font-weight: lighter;
+    margin: 5px 0; 
+    line-height: 0.5;
+}
+.box2 .numero{ 
+    font-size: 10px;
+    color: #8e8e8e;
+    font-family: "Segoe IU", sans-serif;
+    font-weight: lighter;
+    margin: 5px 0; 
+    line-height: 0.5;
+}
+.box2 .titulo{ 
+    font-size: 14px;
+    color: #585757;
+    font-family: "Segoe IU", sans-serif;
+    font-weight: lighter;
+    margin: 5px 0; 
+    line-height: 1.1;
+}
+/*--------*/
+.content{
+    display: flex;
+    width: 980px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0px 20px 0px; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.content-info {
+    display: flex;
+    min-width: 980px;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 5%;
+}
+.col-2{
+    flex-basis: 58%;
+    min-width: 300px;   
+}
+.col-3 img{ 
+    max-width: 100%;
+    padding: 50px 0;
+    margin-top: 1%;
+}
+.contenedor-g{
+    margin: 20px;
+}
+.cont-img{
+    height: 500px;
+    width: 600px;
+    display:inline-block;
+    margin-left: 4%;
+    margin-right: 5%;
+}
+.cont-img img{
+    width: 100%;
+    max-width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+}
+.cont-imgenes{
+    height: 500px;
+    width: 250px;
+    display:inline-block;
+    overflow: hidden;
+    margin-right: 2%;
+}
+.small-img-col{
+    height: 32%;
+    width: 100%;
+    display:inline-block;
+    overflow: hidden;
+    margin-top: 2px;
+}
+.small-img-col img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.small-container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 15%;
+    padding-right: 10px;
+}
+.linea{
+    height: 1px;
+    width: 100%;
+    background-color: #8e8e8e;
+    margin: 10px 0px 10px 0px;
+}
+/*---lista---*/
+.caracteristicas {
+    margin: 20px 0;
+}
+
+.caracteristicas h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #8e8e8e;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-bottom: -25px; 
+}
+.caracteristicas ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.caracteristicas li {
+    flex: 1 1 33%; 
+    margin-bottom: 10px; 
+    font-size: 16px;
+    color: #666; 
+}
+
+.caracteristicas li::before {
+    content: '✔';
+    color: #0073e6; 
+    font-weight: bold;
+}
+
+/*--- Formulario ---*/
+
+.form-container {
+    width: 100%;
+    padding: 15px;
+    height: 250px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin: 0px 10px 8px 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,.form-group select,.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.form-group select {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+    width: 30%;
+}
+
+.phone-group {
+    display: flex;
+    align-items: center;
+    width: 94%;
+}
+
+.phone-group input {
+    flex: 1;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #cc0000;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #b30000;
+}
+
+/*---*/
+/*---- footer---*/
+footer{
+    width: 100%;
+    background: #333333;
+    color: white;  
+    font-size: 12PX; 
+    
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: 12px;
+}
+
+.colum1 p{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.colum2{
+    max-width: 400px;
+    
+}
+
+.colum2 h1{
+    font-size: 22px;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.colum3{
+    max-width: 400px;
+}
+
+.colum3 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: #26518d;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

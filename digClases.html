@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SistemaBeienesRaices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="source/css/styles.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="wrapper">
+            <div class="content">
+                <div id="header-placeholder" style="border: 1px dashed #ccc; text-align: center; padding: 10px;">
+                    <p>Cargando header...</p>
+                </div>
+                <main class="container py-5">
+                    <div class="mt-5">
+                        <h2 class="text-uppercase border-bottom pb-2">
+                            Diagrama de Clases
+                        </h2>
+                        <p>
+                            Un diagrama de clases es una representación visual que muestra las clases, sus atributos, métodos y las relaciones entre ellas dentro de un sistema orientado a objetos. Este tipo de diagrama es una herramienta fundamental del Lenguaje Unificado de Modelado (UML), ampliamente utilizada en el diseño y documentación de sistemas de software. Los diagramas de clases permiten a los desarrolladores y arquitectos de software comprender la estructura del sistema, identificar dependencias y definir la interacción entre diferentes componentes, facilitando así la comunicación y el desarrollo eficiente del proyecto.
+                        </p>
+                        <style>
+                            .img-container {
+                                position: relative;
+                                width: 1200px;
+                                height: 700px;
+                                overflow: hidden;
+                                border: 1px solid #ddd;
+                                margin-bottom: 20px;
+                            }
+                    
+                            .img-container img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                transition: transform 0.25s ease;
+                            }
+                    
+                            .controls {
+                                position: absolute;
+                                bottom: 10px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background: rgba(255, 255, 255, 0.8);
+                                padding: 10px;
+                                border-radius: 5px;
+                                display: flex;
+                                gap: 5px;
+                            }
+                    
+                            .controls button {
+                                padding: 5px 10px;
+                                font-size: 18px;
+                                cursor: pointer;
+                                border: none;
+                                background: #333;
+                                color: #fff;
+                                border-radius: 3px;
+                                transition: background 0.3s ease;
+                            }
+                    
+                            .controls button:hover {
+                                background: #555;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="img-container">
+                            <img id="zoom-img" src="source/img/DC.jpg" alt="Imagen con zoom">
+                            <div class="controls">
+                                <button onclick="zoomIn()">+</button>
+                                <button onclick="zoomOut()">-</button>
+                                <button onclick="moveImage(75, 0)">←</button>
+                                <button onclick="moveImage(-75, 0)">→</button>
+                                <button onclick="moveImage(0, 75)">↑</button>
+                                <button onclick="moveImage(0, -75)">↓</button>
+                    
+                            </div>
+                        </div>
+                    
+                        <script>
+                            const img = document.getElementById('zoom-img');
+                            let scale = 1;
+                            let posX = 0;
+                            let posY = 0;
+                    
+                            function zoomIn() {
+                                scale = Math.min(scale + 0.70, 3);
+                                updateTransform();
+                            }
+                    
+                            function zoomOut() {
+                                scale = Math.max(scale - 0.7, 1);
+                                updateTransform();
+                            }
+                    
+                            function moveImage(deltaX, deltaY) {
+                                posX += deltaX;
+                                posY += deltaY;
+                                updateTransform();
+                            }
+                    
+                            function updateTransform() {
+                                img.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`;
+                            }
+                        </script>
+
+
+
+
+
+
+
+
+                    </div>
+                </main>
+    </div></div></div>
+
+    <div id="footer-placeholder" style="border: 1px dashed #ccc; text-align: center; padding: 10px;">
+        <p>Cargando footer...</p>
+    </div>
+    <script src="source/js/jquery.js"></script>
+    <script src="source/js/zoom.js"></script>
+    <script src="source/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="source/js/main.js"></script>
+
+    
+</body>
+</html>
